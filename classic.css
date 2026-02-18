@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: white;
+  color: black;
+}
+
+/* No flexbox */
+.navbar {
+  background: #4f46e5;
+  color: white;
+  padding: 20px;
+}
+
+.navbar h1 {
+  display: inline-block;
+}
+
+.navbar a {
+  float: right;
+  color: white;
+}
+
+/* Fixed typography */
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/* Float layout instead of flexbox */
+.cards {
+  padding: 20px;
+}
+
+.card {
+  width: 30%;
+  float: left;
+  margin-right: 3%;
+  padding: 20px;
+  background: #e0e7ff;
+}
+
+/* Media query instead of container query */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

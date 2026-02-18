@@ -1,0 +1,72 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --primary: #4f46e5;
+  --background: #ffffff;
+  --text: #111111;
+  --spacing: 1.5rem;
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* =========================
+   FLUID TYPOGRAPHY
+========================= */
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+/* =========================
+   FLEXBOX LAYOUT
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+  background: var(--primary);
+  color: white;
+}
+
+.hero {
+  padding: var(--spacing);
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+
+/* =========================
+   CONTAINER QUERIES
+========================= */
+
+.cards {
+  container-type: inline-size;
+}
+
+@container (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+.card {
+  flex: 1;
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  background: #e0e7ff;
+}
